@@ -1,0 +1,17 @@
+bbb bab
+abab bab
+abba aba
+babb abb
+bbab bab
+aaaaa a
+aaaba bba
+aaaabb bb
+abaaaa abb
+abaaab ab
+baaaab bab
+baaabb
+bbaaaa bb
+bbaaab aaaab
+baabaab baaab
+babaaba bab
+babaabb babaaa
