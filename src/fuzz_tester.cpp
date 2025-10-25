@@ -165,9 +165,16 @@ int main() {
 
     srs old_srs(alphabet, "../trs/trs.txt");
     srs new_srs(alphabet, "../trs/trs_triv.txt");
+    // or you can also test T without baaabb -> epsilon against completed T'' (not trivial)
+    srs srs_el(alphabet, "../trs/trs_epsilonless.txt");
+    srs srs_comp(alphabet, "../trs/trs_completed.txt");
 
     // if some strings fail, raise limits
     fuzz_result result = fuzzer(old_srs, new_srs, min_fuzz_length, max_fuzz_length);
 
+    fuzz_result result_el = fuzzer(srs_el, srs_comp, min_fuzz_length, max_fuzz_length);
+
     cout << result;
+
+    cout << result_el
 }

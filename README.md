@@ -155,15 +155,15 @@ $\text{abba}$ образует критические пары $\langle\text{bab
 
 $\text{ababa}$ образует критические пары $\langle\text{baba}, \text{aaba}\rangle$. $\text{baba}$ сходится к $\text{aba}$. Добавим правило $\text{aaba} \to \text{aba}$.
 
-$\text{aaaba}$ образует критические пары $\langle\text{bba}, \text{aaba}\rangle$. $\text{aaba}$ сходится к $\text{aba}$. Добавим правило $\text{bba} \to \text{aba}$. Правило $\text{bbab} \to \text{bab}$, $\text{aaaba} \to \text{bba}$ можно удалить. 
+$\text{aaaba}$ образует критические пары $\langle\text{bba}, \text{aaba}\rangle$. $\text{aaba}$ сходится к $\text{aba}$. Добавим правило $\text{bba} \to \text{aba}$. Правила $\text{bbab} \to \text{bab}$, $\text{aaaba} \to \text{bba}$ можно удалить. 
 
-$\text{bbaaaa}$ образует критические пары $\langle\text{abaaaa}, \text{bb}\rangle$. $\text{abaaaa}$ сходится к $\text{bab}$. Добавим правило $\text{bab} \to \text{bb}$. Правило $\text{baba} \to \text{aba}$, $\text{bbaaaa} \to \text{bb}$ можно удалить.
+$\text{bbaaaa}$ образует критические пары $\langle\text{abaaaa}, \text{bb}\rangle$. $\text{abaaaa}$ сходится к $\text{bab}$. Добавим правило $\text{bab} \to \text{bb}$. Правила $\text{baba} \to \text{aba}$, $\text{bbaaaa} \to \text{bb}$ можно удалить.
 
-$\text{bbaaab}$ образует критические пары $\langle\text{abaaab}, \text{aaaab}\rangle$. $\text{abaaab}$ сходится к $\text{ab}$. Добавим правило $\text{aaaab} \to \text{ab}$. Правило $\text{baaaab} \to \text{bab}$, $\text{aaaabb} \to \text{bb}$, $\text{bbaaab} \to \text{aaaab}$ можно удалить.
+$\text{bbaaab}$ образует критические пары $\langle\text{abaaab}, \text{aaaab}\rangle$. $\text{abaaab}$ сходится к $\text{ab}$. Добавим правило $\text{aaaab} \to \text{ab}$. Правила $\text{baaaab} \to \text{bab}$, $\text{aaaabb} \to \text{bb}$, $\text{bbaaab} \to \text{aaaab}$ можно удалить.
 
-$\text{baaabb}$ образует критические пары $\langle\text{baaabb}, \varepsilon\rangle$. $\text{baaabb}$ сходится к $\text{bb}$. Добавим правило $\text{bb} \to \varepsilon$. Правило $\text{baaabb} \to \varepsilon$ можно удалить.
+$\text{baaabb}$ образует критические пары $\langle\text{baaabb}, \varepsilon\rangle$. $\text{baaabb}$ сходится к $\text{bb}$. Добавим правило $\text{bb} \to \varepsilon$. Правила $\text{baaabb} \to \varepsilon$ можно удалить.
 
-$\text{baabaab}$ образует критические пары $\langle\text{babaab}, \text{baaab}\rangle$. $\text{babaab}$ сходится к $\text{abaab}$. Добавим правило $\text{abaab} \to \text{baaab}$. Правило $\text{baabaab} \to \text{baaab}$ можно удалить.
+$\text{baabaab}$ образует критические пары $\langle\text{babaab}, \text{baaab}\rangle$. $\text{babaab}$ сходится к $\text{abaab}$. Добавим правило $\text{abaab} \to \text{baaab}$. Правила $\text{baabaab} \to \text{baaab}$ можно удалить.
 
 Новая критическая пара из $\text{bbaaab}$: $\langle\text{aaab}, \text{abaaab}\rangle$. $\text{abaaab}$ сходится к $\text{ab}$. Добавим правило $\text{aaab} \to \text{ab}$.
 
@@ -180,12 +180,157 @@ $$
 \text{b} \to \varepsilon
 \end{array}
 \right.
+=
+T'.
 $$
+
+В таком случае пополним систему без $\varepsilon$-правила. До разбора критической пары с эпсилоном:
+
+$$
+\left\lbrace
+  \begin{array}{lr}
+    \text{abaab} \to \text{baaab} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{bb} \\
+    \text{bba} \to \text{aba} \\
+    \text{aaba} \to \text{aba} \\
+    \text{abb} \to \text{bb} \\
+    \text{bbb} \to \text{bb} \\
+    \text{abab} \to \text{bb} \\
+    \text{babb} \to \text{abb} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{abaaaa} \to \text{bb}\\
+    \text{abaaab} \to \text{ab} \\
+    \text{babaaba} \to \text{bb} \\
+    \text{babaabb} \to \text{babaaa}
+\end{array}
+\right. 
+$$
+
+$\text{babaaba}$ порождает критическую пару $\langle\text{bbaaba}, \text{bb}\rangle$. $\text{bbaaba}$ сходится к $\text{aba}$.　Добавим правило $\text{aba} \to \text{bb}$. Тогда правило $\text{aaba} \to \text{aba}$ выводится из других правил, его можно убрать.
+
+$$
+\left\lbrace
+  \begin{array}{lr}
+    \text{abaab} \to \text{baaab} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{bb} \\
+    \text{bba} \to \text{bb} \\
+    \text{abb} \to \text{bb} \\
+    \text{bbb} \to \text{bb} \\
+    \text{abab} \to \text{bb} \\
+    \text{babb} \to \text{bb} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{abaaaa} \to \text{bb}\\
+    \text{abaaab} \to \text{ab} \\
+    \text{aba} \to \text{bb} \\
+    \text{babaabb} \to \text{babaaa}
+\end{array}
+\right. 
+$$
+
+$\text{abaab}$ порождает критическую пару $\langle\text{bbab}, \text{baaab}\rangle$. $\text{bbab}$ сходится к $\text{bb}$. Тогда заменим $\text{abaab} \to \text{baaab}$ правилом $\text{baaab} \to \text{bb}$.
+
+Теперь $\text{abaaab}$ порождает критическую пару $\langle\text{abb}, \text{ab}\rangle$. $\text{abb}$ сходится к $\text{bb}$. Значит, заменим $\text{abaaab} \to \text{ab}$ правилом $\text{bb} \to \text{ab}$.
+
+$$
+\left\lbrace
+  \begin{array}{lr}
+    \text{baaab} \to \text{bb} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{bb} \\
+    \text{bba} \to \text{bb} \\
+    \text{abb} \to \text{bb} \\
+    \text{bbb} \to \text{bb} \\
+    \text{abab} \to \text{bb} \\
+    \text{babb} \to \text{bb} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{abaaaa} \to \text{bb}\\
+    \text{bb} \to \text{ab} \\
+    \text{aba} \to \text{bb} \\
+    \text{babaabb} \to \text{babaaa}
+\end{array}
+\right. 
+\to
+\left\lbrace
+  \begin{array}{lr}
+    \text{baaab} \to \text{ab} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{ab} \\
+    \text{abb} \to \text{ab} \\
+    \text{bbb} \to \text{ab} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{bb} \to \text{ab} \\
+    \text{aba} \to \text{ab} \\
+    \text{babaabb} \to \text{babaaa}
+\end{array}
+\right.
+$$
+
+$\text{babaabb}$ порождает критические пары $\langle\text{abaabb}, \text{babaaa}\rangle$, $\langle\text{bababb}, \text{babaaa}\rangle$, $\langle\text{babaab}, \text{babaaa}\rangle$. Все части этих пар сходятся к $\text{ab}$, можно убрать. 
+
+$$
+\left\lbrace
+  \begin{array}{lr}
+    \text{baaab} \to \text{ab} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{ab} \\
+    \text{abb} \to \text{ab} \\
+    \text{bbb} \to \text{ab} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{bb} \to \text{ab} \\
+    \text{aba} \to \text{ab} \\
+\end{array}
+\right.
+\to
+\left\lbrace
+  \begin{array}{lr}
+    \text{baaab} \to \text{ab} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{ab} \\
+    \text{abb} \to \text{ab} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{bb} \to \text{ab} \\
+    \text{aba} \to \text{ab} \\
+\end{array}
+\right.
+$$
+
+$\text{aaaaab}$ порождает критическую пару $\text{ab}, \text{aab}$. Добавим правило $\text{aab} \to \text{ab}$.
+
+$$
+\left\lbrace
+  \begin{array}{lr}
+    \text{baaab} \to \text{ab} \\
+    \text{aaaab} \to \text{ab} \\
+    \text{bab} \to \text{ab} \\
+    \text{abb} \to \text{ab} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{bb} \to \text{ab} \\
+    \text{aba} \to \text{ab} \\
+    \text{aab} \to \text{ab} \\
+\end{array}
+\right.
+\to
+\left\lbrace
+  \begin{array}{lr}
+    \text{bab} \to \text{ab} \\
+    \text{aba} \to \text{ab} \\
+    \text{aaaaa} \to \text{a} \\
+    \text{bb} \to \text{ab} \\
+    \text{aab} \to \text{ab} \\
+\end{array}
+\right.
+=
+T''.
+$$
+
+Данная система конфлюэнтна и минимальна. Ни одно правило нельзя получить из других. Заметим, что $\text{ab}$ поглощает все символы слева и справа. Ни одно из правил нельзя изменить на правило с меньшим LHS без потери этого свойства, более того, LHS $\text{bb}$ - наименьшее слово, не являющееся НФ. 
 
 
 ## 5. Инварианты.
 
-Поскольку длина слова при переписывании не возрастает и существует конечное число нормальных форм конечной длины, то приведённые ниже инварианты будут монотонно уменьшаться при применении правил.
+Поскольку длина слова при переписывании не возрастает и существует конечное число нормальных форм конечной длины, то приведённые ниже инварианты будут монотонно уменьшаться при применении правил. Они справедливы для $T_{term}$, $T'$ и $T''$ (пополнение без $\varepsilon$-правила).
 
 1. Длина слова.
 2. $\sum_{i} M(w_i)$  (при $\dfrac{1}{3} \leq \dfrac{W(\text{a})}{W(\text{b})} \leq 1$).

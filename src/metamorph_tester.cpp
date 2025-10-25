@@ -135,6 +135,7 @@ int main() {
     // terminable version of T with flipped rule
     srs old_srs(alphabet, "../trs/trs_eps.txt");
     srs new_srs(alphabet, "../trs/trs_triv.txt");
+    srs completed_srs(alphabet, "../trs/trs_completed.txt");
 
 
     vector<pair<INV_PTR, string> > invariants = {
@@ -148,6 +149,7 @@ int main() {
 
     invariant_test result_old = invariant_tester(old_srs, invariants, invariant_pairs, min_length, max_length);
     invariant_test result_new = invariant_tester(new_srs, invariants, invariant_pairs, min_length, max_length);
+    invariant_test result_completed = invariant_tester(completed_srs, invariants, invariant_pairs, min_length, max_length);
 
 
     cout << "SRS T: " << endl;
@@ -155,4 +157,7 @@ int main() {
 
     cout << "SRS T': " << endl;
     cout << result_new;
+
+    cout << "SRS T'': " << endl;
+    cout << result_completed;
 }
