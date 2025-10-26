@@ -1,0 +1,16 @@
+bbb bab
+abab bab
+abba aba
+babb abb
+bbab bab
+aaaaa a
+aaaba bba
+aaaabb bb
+abb abaaaa
+abaaab ab
+baaaab bab
+bbaaaa bb
+bbaaab aaaab
+baabaab baaab
+babaaba bab
+babaabb babaaa
